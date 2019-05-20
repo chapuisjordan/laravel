@@ -12,21 +12,5 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('welcome');
 });
-
-Route::get('voyages/{id_du_voyage}', function(){
-    echo 'Ceci est un test';
-});
-
-Route::get('test', function(){
-    return view('testlayout');
-});
-
-Route::get('/show/{voyage}', function($voyage){
-    return view('show', compact('voyage'));
-})->name('showController');
-
-// Route::get('/show/{voyage}', function(){
-//     return view('show');
-// })->name('showController');
