@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.html')
 @section('main')
   <body>
     
@@ -8,7 +8,6 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
-
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
@@ -197,44 +196,7 @@
       </div>
     </section>
 
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 promo ftco-animate">
-            <a href="{{ route('showController', ['voyage' => 'Group Cruises']) }}" class="promo-img mb-4" style="background-image: url(images/promo-1.jpg);"></a>
-            <div class="text text-center">
-              <h2>Group Cruises</h2>
-              <h3 class="price"><span>from</span> $299</h3>
-              <a href="{{ route('showController', ['voyage' => 'Group Cruises']) }}" class="read">Read more</a>
-            </div>
-          </div>
-          <div class="col-lg-3 promo ftco-animate">
-            <a href="{{ route('showController', ['voyage' => 'Beach Tours']) }}" class="promo-img mb-4" style="background-image: url(images/promo-2.jpg);"></a>
-            <div class="text text-center">
-              <h2>Beach Tours</h2>
-              <h3 class="price"><span>from</span> $199</h3>
-              <a href="{{ route('showController', ['voyage' => 'Beach Tours']) }}" class="read">Read more</a>
-            </div>
-          </div>
-          <div class="col-lg-3 promo ftco-animate">
-            <a href="{{ route('showController', ['voyage' => 'Mountain Tours']) }}" class="promo-img mb-4" style="background-image: url(images/promo-3.jpg);"></a>
-            <div class="text text-center">
-              <h2>Mountain Tours</h2>
-              <h3 class="price"><span>from</span> $179</h3>
-              <a href="{{ route('showController', ['voyage' => 'Mountain Tours']) }}" class="read">Read more</a>
-            </div>
-          </div>
-          <div class="col-lg-3 promo ftco-animate">
-            <a href="{{ route('showController', ['voyage' => 'Family Tours']) }}" class="promo-img mb-4" style="background-image: url(images/promo-3.jpg);"></a>
-            <div class="text text-center">
-              <h2>Family Tours</h2>
-              <h3 class="price"><span>from</span> $599</h3>
-              <a href="{{ route('showController', ['voyage' => 'Family Tours']) }}" class="read">Read more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <section class="ftco-section bg-light">
       <div class="container">
@@ -292,103 +254,22 @@
             <h2>Most Popular Destination</h2>
           </div>
         </div>
-        <div class="row no-gutters">
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="#" class="block-5" style="background-image: url('images/tour-1.jpg');">
-              <div class="text">
-                <span class="price">$399</span>
-                <h3 class="heading">Group Tour in Maldives</h3>
-                <div class="post-meta">
-                  <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                </div>
-                <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="#" class="block-5" style="background-image: url('images/tour-2.jpg');">
-              <div class="text">
-                <span class="price">$399</span>
-                <h3 class="heading">Group Tour in Maldives</h3>
-                <div class="post-meta">
-                  <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                </div>
-                <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="#" class="block-5" style="background-image: url('images/tour-3.jpg');">
-              <div class="text">
-                <span class="price">$399</span>
-                <h3 class="heading">Group Tour in Maldives</h3>
-                <div class="post-meta">
-                  <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                </div>
-                <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="#" class="block-5" style="background-image: url('images/tour-4.jpg');">
-              <div class="text">
-                <span class="price">$399</span>
-                <h3 class="heading">Group Tour in Maldives</h3>
-                <div class="post-meta">
-                  <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                </div>
-                <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="#" class="block-5" style="background-image: url('images/tour-5.jpg');">
-              <div class="text">
-                <span class="price">$399</span>
-                <h3 class="heading">Group Tour in Maldives</h3>
-                <div class="post-meta">
-                  <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                </div>
-                <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="#" class="block-5" style="background-image: url('images/tour-6.jpg');">
-              <div class="text">
-                <span class="price">$399</span>
-                <h3 class="heading">Group Tour in Maldives</h3>
-                <div class="post-meta">
-                  <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                </div>
-                <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="#" class="block-5" style="background-image: url('images/tour-7.jpg');">
-              <div class="text">
-                <span class="price">$399</span>
-                <h3 class="heading">Group Tour in Maldives</h3>
-                <div class="post-meta">
-                  <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                </div>
-                <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="#" class="block-5" style="background-image: url('images/tour-8.jpg');">
-              <div class="text">
-                <span class="price">$399</span>
-                <h3 class="heading">Group Tour in Maldives</h3>
-                <div class="post-meta">
-                  <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                </div>
-                <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-              </div>
-            </a>
-          </div>
+
+          @foreach($voyages as $voyage)
+            <div class="col-md-6 col-lg-3 ftco-animate">
+              <a href="{{ route('showController', ['id' => $voyage->id ]) }}" class="block-5" style="background-image: url('{{ $voyage->image}}');">
+                  <div class="text">
+                    <span class="price">{{ $voyage->prix }}</span>
+                    <h3 class="heading">{{ $voyage->titre }}</h3>
+                    <div class="post-meta">
+                      <span>{{ $voyage->destination }}</span>
+                    </div>
+                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
+                  </div>
+                </a>
+            </div>
+          @endforeach
+          
         </div>
       </div>
     </section>

@@ -23,9 +23,6 @@
     <title>razo</title>
 </head>
     <body>
-    <header>
-    <h1>Bienvenue sur la console admin</h1>
-    </header>
 
             @yield('main')
 

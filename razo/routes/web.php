@@ -19,14 +19,17 @@ Route::get('voyages/{id_du_voyage}', function(){
     echo 'Ceci est un test';
 });
 
-Route::get('test', function(){
-    return view('testlayout');
+
+Route::get('/admin', function(){
+    return view('admin.createVoyage');
 });
 
-Route::get('/show/{voyage}', function($voyage){
-    return view('show', compact('voyage'));
-})->name('showController');
+Route::get('/', 'VoyageController@getAllTravel');
 
-// Route::get('/show/{voyage}', function(){
-//     return view('show');
-// })->name('showController');
+Route::get('/show/{id}', 'VoyageController@getOneTravel')->name('showController');
+       
+Route::post('/createVoyage', 'VoyageController@createVoyage')->name('createVoyage');
+
+Route::get('/tableVoyages', 'VoyageController@showTable')->name('showTable');
+
+Route::get('/oneTravelAdmin/{id}', 'VoyageController@getOneTravel')->name('getOneTravelAdmin');
