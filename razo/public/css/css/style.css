@@ -1,0 +1,13 @@
+.flex{
+    display: flex;
+}
+
+.title-admin{
+    font-size:90px;
+}
+
+.create-voyage{
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+}

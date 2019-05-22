@@ -1,21 +1,17 @@
-@extends('layouts.html')
+@extends('layouts.admin')
 @section('main')  
     
     <section class="home-slider owl-carousel">
       <div class="slider-item" style="background-image: url('../images/bg_3.jpg');" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
-          <div class="row slider-text align-items-center">
-            <div class="col-md-7 col-sm-12 ftco-animate">
-              <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p>
-              <h1 class="mb-3"></h1>
-            </div>
-          </div>
         </div>
       </div>
     </section>
     <!-- END slider -->
-
+    <div class="all-destinations-from-details">
+      <a  class="all-destinations-from-details-text" href="{{ route('showTable') }}"> Voir toute les destinations</a>
+    </div>
     <section class="ftco-section-2">
       <div class="container-fluid d-flex">
         <div class="section-2-blocks-wrapper row no-gutters">
@@ -24,7 +20,6 @@
           </div>
           <div class="text col-lg-6 ftco-animate">
             <div class="text-inner align-self-start">
-              
               <h3>{{ $travel->titre }}</h3>
               <p>{{ $travel->destination }}</p>
               <p>{{ $travel->description }}</p>
