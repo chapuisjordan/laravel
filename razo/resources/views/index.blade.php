@@ -17,6 +17,18 @@
             <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
             <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
             <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            @auth
+              <li class="nav-item">
+                <a href="{{ route('logout') }}" class="nav-link"onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Se déconnecter
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  @csrf
+                </form>                                       
+              </li>
+              
+            @else
+              <li class="nav-item"><a href="/login" class="nav-link">Se connecter</a></li>
+            @endauth
           </ul>
         </div>
       </div>
@@ -59,124 +71,7 @@
     </section>
     <!-- END slider -->
 
-    <div class="ftco-section-search">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 tabulation-search">
-            <div class="element-animate">
-              <div class="nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link p-3 active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><span>01</span> Flight</a>
-                <a class="nav-link p-3" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><span>02</span> Hotel</a>
-                <a class="nav-link p-3" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><span>03</span> Car Rent</a>
-                <a class="nav-link p-3" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><span>04</span> Cruises</a>
-              </div>
-            </div>
-              
-            <div class="tab-content py-5" id="v-pills-tabContent">
-              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                <div class="block-17">
-                  <form action="" method="post" class="d-block d-lg-flex">
-                    <div class="fields d-block d-lg-flex">
-
-                      <div class="textfield-search one-third"><input type="text" class="form-control" placeholder="Search Location"></div>
-
-                      <div class="check-in one-third"><input type="text" id="checkin_date" class="form-control" placeholder="Check-in date"></div>
-
-                      <div class="check-out one-third"><input type="text" id="checkout_date" class="form-control" placeholder="Check-out date"></div>
-                      <div class="select-wrap one-third">
-                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                        <select name="" id="" class="form-control">
-                          <option value="">Guest</option>
-                          <option value="">1</option>
-                          <option value="">2</option>
-                          <option value="">3</option>
-                          <option value="">4+</option>
-                        </select>
-                      </div>
-                    </div>
-                    <input type="submit" class="search-submit btn btn-primary" value="Find Flights">  
-                  </form>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                <div class="block-17">
-                  <form action="" method="post" class="d-block d-lg-flex">
-                    <div class="fields d-block d-lg-flex">
-                      <div class="textfield-search one-third"><input type="text" class="form-control" placeholder="Search Hotel"></div>
-
-                      <div class="check-in one-third"><input type="text" id="checkin_date" class="form-control" placeholder="Check-in date"></div>
-
-                      <div class="check-out one-third"><input type="text" id="checkout_date" class="form-control" placeholder="Check-out date"></div>
-                      <div class="select-wrap one-third">
-                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                        <select name="" id="" class="form-control">
-                          <option value="">Guest</option>
-                          <option value="">1</option>
-                          <option value="">2</option>
-                          <option value="">3</option>
-                          <option value="">4+</option>
-                        </select>
-                      </div>
-                    </div>
-                    <input type="submit" class="search-submit btn btn-primary" value="Find Hotels">  
-                  </form>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                <div class="block-17">
-                  <form action="" method="post" class="d-block d-lg-flex">
-                    <div class="fields d-block d-lg-flex">
-                      <div class="textfield-search one-third"><input type="text" class="form-control" placeholder="Search Location"></div>
-
-                      <div class="check-in one-third"><input type="text" id="start_date" class="form-control" placeholder="Start date"></div>
-
-                      <div class="check-out one-third"><input type="text" id="return_date" class="form-control" placeholder="Return date"></div>
-                      <div class="select-wrap one-third">
-                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                        <select name="" id="" class="form-control">
-                          <option value="">Guest</option>
-                          <option value="">1</option>
-                          <option value="">2</option>
-                          <option value="">3</option>
-                          <option value="">4+</option>
-                        </select>
-                      </div>
-                    </div>
-                    <input type="submit" class="search-submit btn btn-primary" value="Find Car">  
-                  </form>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-                <div class="block-17">
-                  <form action="" method="post" class="d-block d-lg-flex">
-                    <div class="fields d-block d-lg-flex">
-                      <div class="textfield-search one-third one-third-1"><input type="text" class="form-control" placeholder="Search Location"></div>
-
-
-                      <div class="check-out one-third one-third-1"><input type="text" id="start_date" class="form-control" placeholder="Check-out date"></div>
-
-                      <div class="select-wrap one-third one-third-1">
-                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                        <select name="" id="" class="form-control">
-                          <option value="">Categories</option>
-                          <option value="">Suite</option>
-                          <option value="">Super Deluxe</option>
-                          <option value="">Balcony</option>
-                          <option value="">Economy</option>
-                          <option value="">Luxury</option>
-                        </select>
-                      </div>
-                    </div>
-                    <input type="submit" class="search-submit btn btn-primary" value="Find Cruise">  
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+ 
     <section class="ftco-section-2">
       <div class="container-fluid d-flex">
         <div class="section-2-blocks-wrapper row no-gutters">
@@ -198,54 +93,7 @@
 
     
 
-    <section class="ftco-section bg-light">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-            <h2>Our Services</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-sailboat"></span></div></div>
-              <div class="media-body p-2">
-                <h3 class="heading">Special Activities</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-around"></span></div></div>
-              <div class="media-body p-2">
-                <h3 class="heading">Travel Arrangements</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-compass"></span></div></div>
-              <div class="media-body p-2">
-                <h3 class="heading">Private Guide</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>    
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-map-of-roads"></span></div></div>
-              <div class="media-body p-2">
-                <h3 class="heading">Location Manager</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>      
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <section class="ftco-section">
       <div class="container-fluid">

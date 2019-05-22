@@ -1,7 +1,10 @@
 @extends('layouts.admin')
 @section('main')
+@if ($errors->has('label'))
+  {{ $errors->first('label') }}
+@endif
 <div class="create-voyage">
-    <a href="{{ route('createVoyage') }}">Ajouter un voyage</a>
+    <a href="{{ route('formCreateVoyage') }}">Ajouter un voyage</a>
 </div>
 <table class="table table-striped table-dark">
   <thead>

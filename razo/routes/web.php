@@ -24,6 +24,10 @@ Route::get('/admin', function(){
     return view('admin.createVoyage');
 });
 
+Route::get('/formCreateVoyage', function(){
+    return view('admin.createVoyage');
+})->name('formCreateVoyage');
+
 Route::get('/', 'VoyageController@getAllTravel');
 
 Route::get('/show/{id}', 'VoyageController@getOneTravel')->name('showController');
@@ -39,3 +43,10 @@ Route::get('/deleteTravel/{id}', 'VoyageController@deleteOneTravel')->name('dele
 Route::get('/updateTravel/{id}', 'VoyageController@updateTravel')->name('updateTravel');
 
 Route::post('/updateVoyageAction/{id}', 'VoyageController@updateTravelAction')->name('updateTravelAction');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -1,5 +1,8 @@
 @extends('layouts.admin')
 @section('main')
+<div class="all-destinations-from-details">
+      <a  class="all-destinations-from-details-text" href="{{ route('showTable') }}"> Voir toute les destinations</a>
+</div>
 <form class="perso-form" method="post" action="{{ route('createVoyage') }}">
     {{ csrf_field() }}
   <div class="form-group">
@@ -16,7 +19,7 @@
   </div>
   <div class="form-group">
     <label for="prix">Prix</label>
-    <input type="float" class="form-control" name="prix" id="prix">
+    <input type="double" class="form-control" name="prix" id="prix">
   </div>
   <div class="form-group">
     <label for="image">Image</label>
