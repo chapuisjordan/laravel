@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class DeletePostsTable extends Migration
+class TopicsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class DeletePostsTable extends Migration
      */
     public function up()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->integer('like');
+        Schema::create('topics', function(Blueprint $table){
+            $table->increments('id');
+            $table->string('title');
+            $table->string('message');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +28,6 @@ class DeletePostsTable extends Migration
      */
     public function down()
     {
-        Schema::table('posts', function (Blueprint $table) {
-
-        });
+        //
     }
 }

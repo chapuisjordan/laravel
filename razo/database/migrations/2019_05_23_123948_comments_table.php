@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ComptablesTable extends Migration
+class CommentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class ComptablesTable extends Migration
      */
     public function up()
     {
-        Schema::create('comptables', function(Blueprint $table){
+        Schema::create('comments', function(Blueprint $table){
             $table->increments('id');
-            $table->string('comptable');
+            $table->string('message');
 
-            $table->bigInteger('voyage_id')->unsigned();
-            $table->foreign('voyage_id')->references('id')->on('voyages');
+            // $table->bigInteger('topic_id');
+            // $table->foreign('topic_id')->references('id')->on('topics');
             $table->timestamps();
         });
     }
