@@ -1,57 +1,107 @@
-@extends('layouts.html')
-@section('main')  
-    
-    <section class="home-slider owl-carousel">
-      <div class="slider-item" style="background-image: url('../images/bg_3.jpg');" data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row slider-text align-items-center">
-            <div class="col-md-7 col-sm-12 ftco-animate">
-              <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p>
-              <h1 class="mb-3"></h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END slider -->
+@extends('layouts.site')
 
-    <section class="ftco-section-2">
-      <div class="container-fluid d-flex">
-        <div class="section-2-blocks-wrapper row no-gutters">
-          <div class="img col-sm-12 col-lg-6" style="background-image: url(' {{ $travel->image }}');">
-            <a href="https://vimeo.com/45830194" class="button popup-vimeo"><span class="ion-ios-play"></span></a>
-          </div>
-          <div class="text col-lg-6 ftco-animate">
-            <div class="text-inner align-self-start">
+@section('content')
+
+            <div class="col-lg-8 col-md-8">
+
+                <!-- POST -->
+                <div class="post beforepagination">
+                    <div class="topwrap">
+                        <div class="userinfo pull-left">
+                            <div class="avatar">
+                                <img src="{{asset('/images/avatar.jpg')}}" alt="">
+                                <div class="status green">&nbsp;</div>
+                            </div>
+
+                            
+                        </div>
+                        <div class="posttext pull-left">
+                        <h2>TITRE</h2>
+                           <p>MESSAGE</p> 
+                    </div>
+                        <div class="clearfix"></div>
+                    </div>                              
+                    <div class="postinfobot">
+
+                       
+
+                        <div class="clearfix"></div>
+                    </div>
+                </div><!-- POST -->
+
+
+                <div class="post"></div>
+
+                <div class="post">
+                        <div class="topwrap">
+                            <div class="userinfo pull-left">
+                                <div class="avatar">
+                                    <img src="{{asset('/images//avatar3.jpg')}}" alt="">
+                                    <div class="status red">&nbsp;</div>
+                                </div>
+
+                                
+                            </div>
+                            <div class="posttext pull-left">
+                            <p> MESSAGE commentaire</p>
+                                    </div>
+                            <div class="clearfix"></div>
+                        </div>                              
+                        <div class="postinfobot">                  
+
+                            <div class="clearfix"></div>
+                        </div>
+        </div>
+
+
+                
+
+
+             
+
               
-              <h3>{{ $travel->titre }}</h3>
-              <p>{{ $travel->destination }}</p>
-              <p>{{ $travel->description }}</p>
+                
 
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+
+
+           
+
+
+                <!-- POST -->
+                <div class="post">
+                <form action="#" class="form" method="#">
+                        <div class="topwrap">
+                            <div class="userinfo pull-left">
+                                
+                            <input type="hidden" name="id" value="#">
+                                
+                            </div>
+                            <div class="posttext pull-left">
+                                <div class="textwraper">
+                                    <div class="postreply">Post a Reply</div>
+                                    <textarea name="commentaire" id="reply" placeholder="Type your message here"></textarea>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>                              
+                        <div class="postinfobot">
+
+                          
+
+                          
+
+                            <div class="pull-right postreply">
+                                <div class="pull-left"><button type="submit" class="btn btn-primary">Post Reply</button></div>
+                                <div class="clearfix"></div>
+                            </div>
+
+
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div><!-- POST -->
+
+
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
- 
-
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    
-  
-
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-
-@stop
+               
+@endsection
